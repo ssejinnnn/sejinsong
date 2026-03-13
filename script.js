@@ -15,6 +15,12 @@ function setLineState(el, opacity, y, blur) {
   el.style.filter = `blur(${blur}px)`;
 }
 
+function hideAll() {
+  setLineState(t0, 0, 0, 0);
+  setLineState(t1, 0, 0, 0);
+  setLineState(t2, 0, 0, 0);
+}
+
 function updateIntro() {
   const rect = zone.getBoundingClientRect();
   const totalScroll = zone.offsetHeight - window.innerHeight;
@@ -23,29 +29,41 @@ function updateIntro() {
 
   const root = document.documentElement;
 
-  // letters gather inward while scrolling
-  const gap = 16 - progress * 12;
+  // 모바일에서 gap 조금 더 작게
+  const isMobile = window.innerWidth <= 700;
+  const startGap = isMobile ? 12 : 16;
+  const endGap = isMobile ? 2 : 4;
+  const gap = startGap - progress * (startGap - endGap);
   root.style.setProperty("--gap", `${Math.max(0, gap)}vw`);
 
-  // stage 0: sejin + song
-  if (progress < 0.33) {
-    const p = progress / 0.33;
+  hideAll();
+
+  // stage 0
+  if (progress < 0.28) {
     setLineState(t0, 1, 0, 0);
-    setLineState(t1, p, 10 - p * 10, 1 - p);
-    setLineState(t2, 0, 10, 1);
   }
-  // stage 1: se + so
-  else if (progress < 0.66) {
-    const p = (progress - 0.33) / 0.33;
-    setLineState(t0, 1 - p, p * -10, p);
+
+  // transition 0 -> 1
+  else if (progress < 0.38) {
+    const p = (progress - 0.28) / 0.10;
+    setLineState(t0, 1 - p, -4 * p, 0);
+    setLineState(t1, p, 4 - 4 * p, 0);
+  }
+
+  // stage 1
+  else if (progress < 0.60) {
     setLineState(t1, 1, 0, 0);
-    setLineState(t2, p, 10 - p * 10, 1 - p);
   }
-  // stage 2: s + s
+
+  // transition 1 -> 2
+  else if (progress < 0.70) {
+    const p = (progress - 0.60) / 0.10;
+    setLineState(t1, 1 - p, -4 * p, 0);
+    setLineState(t2, p, 4 - 4 * p, 0);
+  }
+
+  // stage 2
   else {
-    const p = (progress - 0.66) / 0.34;
-    setLineState(t0, 0, -10, 1);
-    setLineState(t1, 1 - p, p * -10, p);
     setLineState(t2, 1, 0, 0);
   }
 }
@@ -54,11 +72,10 @@ function onScroll() {
   updateIntro();
 }
 
-window.addEventListener("scroll", onScroll);
+window.addEventListener("scroll", onScroll, { passive: true });
 window.addEventListener("resize", onScroll);
 window.addEventListener("load", onScroll);
 
-// theme toggle
 if (modeBtn && onePage) {
   modeBtn.addEventListener("click", () => {
     onePage.classList.toggle("is-dark");
