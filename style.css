@@ -188,3 +188,22 @@ body{
 @media (max-width: 700px){
   .type__line{ font-size: clamp(44px, 12vw, 92px); }
 }
+
+@media (max-width: 700px){
+
+  .oneTop{
+    grid-template-columns: auto auto auto;
+    gap: 8px;
+    font-size: 14px;
+  }
+
+  .oneTop__right{
+    gap: 8px;
+  }
+
+  .modeBtn{
+    padding: 6px 10px;
+    font-size: 13px;
+  }
+
+}
