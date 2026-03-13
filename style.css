@@ -54,9 +54,9 @@ body{
   white-space: nowrap;
 
   opacity: 0;
-  transform: translateY(10px);
-  filter: blur(1px);
-  will-change: opacity, transform, filter;
+  transform: translateY(0);
+  filter: blur(0);
+  will-change: opacity, transform;
 }
 
 .left{

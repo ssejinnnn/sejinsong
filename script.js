@@ -9,16 +9,16 @@ function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
 }
 
-function setLineState(el, opacity, y, blur) {
+function setLineState(el, opacity, y = 0) {
   el.style.opacity = opacity;
   el.style.transform = `translateY(${y}px)`;
-  el.style.filter = `blur(${blur}px)`;
+  el.style.filter = `blur(0px)`;
 }
 
 function hideAll() {
-  setLineState(t0, 0, 0, 0);
-  setLineState(t1, 0, 0, 0);
-  setLineState(t2, 0, 0, 0);
+  setLineState(t0, 0, 0);
+  setLineState(t1, 0, 0);
+  setLineState(t2, 0, 0);
 }
 
 function updateIntro() {
@@ -27,45 +27,44 @@ function updateIntro() {
   const scrolled = clamp(-rect.top, 0, totalScroll);
   const progress = totalScroll > 0 ? scrolled / totalScroll : 0;
 
-  const root = document.documentElement;
-
-  // 모바일에서 gap 조금 더 작게
   const isMobile = window.innerWidth <= 700;
   const startGap = isMobile ? 12 : 16;
   const endGap = isMobile ? 2 : 4;
   const gap = startGap - progress * (startGap - endGap);
-  root.style.setProperty("--gap", `${Math.max(0, gap)}vw`);
+  document.documentElement.style.setProperty("--gap", `${Math.max(0, gap)}vw`);
 
   hideAll();
 
-  // stage 0
-  if (progress < 0.28) {
-    setLineState(t0, 1, 0, 0);
+  // 0: sejin + song
+  if (progress < 0.30) {
+    setLineState(t0, 1, 0);
+    return;
   }
 
-  // transition 0 -> 1
-  else if (progress < 0.38) {
-    const p = (progress - 0.28) / 0.10;
-    setLineState(t0, 1 - p, -4 * p, 0);
-    setLineState(t1, p, 4 - 4 * p, 0);
+  // 0 -> 1 transition
+  if (progress < 0.36) {
+    const p = (progress - 0.30) / 0.06;
+    setLineState(t0, 1 - p, 0);
+    setLineState(t1, p, 0);
+    return;
   }
 
-  // stage 1
-  else if (progress < 0.60) {
-    setLineState(t1, 1, 0, 0);
+  // 1: se + so
+  if (progress < 0.62) {
+    setLineState(t1, 1, 0);
+    return;
   }
 
-  // transition 1 -> 2
-  else if (progress < 0.70) {
-    const p = (progress - 0.60) / 0.10;
-    setLineState(t1, 1 - p, -4 * p, 0);
-    setLineState(t2, p, 4 - 4 * p, 0);
+  // 1 -> 2 transition
+  if (progress < 0.68) {
+    const p = (progress - 0.62) / 0.06;
+    setLineState(t1, 1 - p, 0);
+    setLineState(t2, p, 0);
+    return;
   }
 
-  // stage 2
-  else {
-    setLineState(t2, 1, 0, 0);
-  }
+  // 2: s + s
+  setLineState(t2, 1, 0);
 }
 
 function onScroll() {
