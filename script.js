@@ -24,7 +24,7 @@ function updateIntro() {
   const root = document.documentElement;
 
   // letters gather inward while scrolling
-  const gap = 20 - progress * 16;
+  const gap = 16 - progress * 12;
   root.style.setProperty("--gap", `${Math.max(0, gap)}vw`);
 
   // stage 0: sejin + song
