@@ -296,20 +296,20 @@ body{
     padding-top:14px;
   }
 
-  .projectTitle{
-  font-size:16px;
+ .projectTitle{
+  font-size:12px;
   font-weight:600;
   line-height:1.05;
 }
 
 .projectType{
   margin:4px 0 0 0;
-  font-size:13px;
+  font-size:12px;
   line-height:1.15;
 }
 
 .projectYear{
-  font-size:13px;
+  font-size:12px;
   line-height:1.15;
 }
 
