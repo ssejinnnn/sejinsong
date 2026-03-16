@@ -1,9 +1,9 @@
 :root{
   --bg:#fff;
   --fg:#000;
-  --muted: rgba(0,0,0,.35);
-  --font: ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --gap: 16vw;
+  --muted:rgba(0,0,0,.35);
+  --font:ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --gap:16vw;
 }
 
 *{
@@ -178,30 +178,39 @@ body{
 }
 
 .projectMeta{
-  padding-top:18px;
-}
-
-.projectTitle,
-.projectType,
-.projectYear{
-  margin:0;
-  font-weight:700;
-  letter-spacing:-0.04em;
-  line-height:1.02;
+  padding-top:16px;
 }
 
 .projectTitle{
-  font-size:36px;
+  margin:0;
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:-0.03em;
+  line-height:1.08;
+  color:var(--one-fg);
 }
 
 .projectType{
-  font-size:20px;
-  opacity:.6;
+  margin:6px 0 2px 0;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:-0.02em;
+  color:rgba(0,0,0,.6);
 }
 
 .projectYear{
-  font-size:20px;
-  opacity:.6;
+  margin:0;
+  font-size:16px;
+  font-weight:500;
+  line-height:1.2;
+  letter-spacing:-0.02em;
+  color:rgba(0,0,0,.6);
+}
+
+.onePage.is-dark .projectType,
+.onePage.is-dark .projectYear{
+  color:rgba(255,255,255,.6);
 }
 
 .projectLink:hover .projectTitle,
@@ -288,15 +297,19 @@ body{
   }
 
   .projectTitle{
-    font-size:24px;
+    font-size:20px;
+    line-height:1.08;
   }
 
   .projectType{
-    font-size:16px;
+    margin:6px 0 2px 0;
+    font-size:14px;
+    line-height:1.2;
   }
 
   .projectYear{
-    font-size:16px;
+    font-size:14px;
+    line-height:1.2;
   }
 
   .oneBottom{
