@@ -35,13 +35,11 @@ function updateIntro() {
 
   hideAll();
 
-  // 0: sejin + song
   if (progress < 0.30) {
     setLineState(t0, 1, 0);
     return;
   }
 
-  // 0 -> 1 transition
   if (progress < 0.36) {
     const p = (progress - 0.30) / 0.06;
     setLineState(t0, 1 - p, 0);
@@ -49,13 +47,11 @@ function updateIntro() {
     return;
   }
 
-  // 1: se + so
   if (progress < 0.62) {
     setLineState(t1, 1, 0);
     return;
   }
 
-  // 1 -> 2 transition
   if (progress < 0.68) {
     const p = (progress - 0.62) / 0.06;
     setLineState(t1, 1 - p, 0);
@@ -63,7 +59,6 @@ function updateIntro() {
     return;
   }
 
-  // 2: s + s
   setLineState(t2, 1, 0);
 }
 

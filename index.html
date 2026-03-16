@@ -36,44 +36,56 @@
     </div>
   </section>
 
-  <!-- 2) ONE page -->
+  <!-- 2) Portfolio page (replacing ONE) -->
   <section class="onePage" id="one">
     <header class="oneTop">
       <div class="oneTop__left">Sejin Song</div>
 
-      <!-- ✅ center button (toggle) -->
       <button class="modeBtn" id="modeBtn" type="button" aria-label="Toggle theme">
         Mode
       </button>
 
       <nav class="oneTop__right">
-        <a href="#about" class="navLink is-active">About</a>
-        <a href="#work" class="navLink">Work</a>
+        <a href="#about" class="navLink">About</a>
+        <a href="#work" class="navLink is-active">Work</a>
       </nav>
     </header>
 
-    <div class="oneBig">
-      <div class="oneBig__word">ONE</div>
-    </div>
+    <main class="portfolioMain" id="work">
+      <article class="projectCard">
+        <a href="water-on-mars.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="wateronmars.png" alt="Water on Mars book design preview" class="projectImage" />
+          </div>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Water on Mars</h2>
+            <p class="projectType">Book Design</p>
+            <p class="projectYear">2025</p>
+          </div>
+        </a>
+      </article>
 
-   <footer class="oneBottom">
+      <article class="projectCard">
+        <a href="clock-tunnel.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="clocktunnel.jpg" alt="Clock Tunnel web design preview" class="projectImage" />
+          </div>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Clock Tunnel</h2>
+            <p class="projectType">Web Design</p>
+            <p class="projectYear">2026</p>
+          </div>
+        </a>
+      </article>
 
-  <!-- LEFT -->
-  <a class="footLink" href="mailto:s7e.song@gmail.com">
-    Email
-  </a>
 
-  <!-- CENTER -->
-  <div class="footCenter">
-  </div>
-
-  <!-- RIGHT -->
-  <a class="footLink" href="https://www.instagram.com/ssejinnnn/" target="_blank">
-    Instagram
-  </a>
-
-</footer>
-
+    <footer class="oneBottom">
+      <a class="footLink" href="mailto:s7e.song@gmail.com">Email</a>
+      <div class="footCenter"></div>
+      <a class="footLink" href="https://www.instagram.com/ssejinnnn/" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+    </footer>
   </section>
 
   <script src="script.js"></script>
