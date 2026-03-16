@@ -297,20 +297,21 @@ body{
   }
 
   .projectTitle{
-    font-size:20px;
-    line-height:1.08;
-  }
+  font-size:16px;
+  font-weight:600;
+  line-height:1.05;
+}
 
-  .projectType{
-    margin:6px 0 2px 0;
-    font-size:14px;
-    line-height:1.2;
-  }
+.projectType{
+  margin:4px 0 0 0;
+  font-size:13px;
+  line-height:1.15;
+}
 
-  .projectYear{
-    font-size:14px;
-    line-height:1.2;
-  }
+.projectYear{
+  font-size:13px;
+  line-height:1.15;
+}
 
   .oneBottom{
     left:16px;
