@@ -149,7 +149,7 @@ body{
 
 /* ---------- portfolio list ---------- */
 .portfolioMain{
-  width:min(1240px, calc(100vw - 56px));
+  width:min(1000px, calc(100vw - 56px));
   margin:0 auto;
   padding:20px 0 120px;
 }
