@@ -270,3 +270,26 @@ a {
     padding-left: 0;
   }
 }
+.back-home {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.back-home__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.back-home__button:hover {
+  background: var(--text);
+  color: var(--bg);
+  transform: translateY(-1px);
+}
