@@ -1,124 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Water on Mars — Sejin Song</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sejin + Song</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="site-body">
-  <header class="site-header">
-    <a class="brand" href="index.html">Sejin Song</a>
 
-    <div class="header-center">
-      <button id="modeToggle" class="mode-button" type="button" aria-label="Toggle theme">
+<body>
+  <!-- 1) Intro scroll animation zone -->
+  <section class="scrollZone" id="scrollZone">
+    <div class="stage">
+      <div class="type">
+        <!-- Stage 0 -->
+        <h1 class="type__line is-0" id="t0">
+          <span class="left">sejin</span>
+          <span class="plus">+</span>
+          <span class="right">song</span>
+        </h1>
+
+        <!-- Stage 1 -->
+        <h1 class="type__line is-1" id="t1" aria-hidden="true">
+          <span class="left">se</span>
+          <span class="plus">+</span>
+          <span class="right">so</span>
+        </h1>
+
+        <!-- Stage 2 -->
+        <h1 class="type__line is-2" id="t2" aria-hidden="true">
+          <span class="left">s</span>
+          <span class="plus">+</span>
+          <span class="right">s</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) Portfolio page (replacing ONE) -->
+  <section class="onePage" id="one">
+    <header class="oneTop">
+      <div class="oneTop__left">Sejin Song</div>
+
+      <button class="modeBtn" id="modeBtn" type="button" aria-label="Toggle theme">
         Mode
       </button>
-    </div>
 
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#">About</a>
-      <a href="index.html" class="active">Work</a>
-    </nav>
-  </header>
+      <nav class="oneTop__right">
+        <a href="#about" class="navLink">About</a>
+        <a href="#work" class="navLink is-active">Work</a>
+      </nav>
+    </header>
 
-  <main class="project-page">
-    <!-- top section -->
-    <section class="project-top">
-      <div class="project-top__image">
-        <img src="image/cover.png" alt="Water on Mars cover mockup" />
-      </div>
-
-      <div class="project-top__info">
-        <h1>Water on Mars</h1>
-
-        <p class="project-summary">
-          An editorial book design exploring the presence, history, and visual
-          evidence of water on Mars through image sequencing, contrast, and
-          structured layout. The project explores how scientific imagery and data can be translated into a visual narrative. Through sequencing, scale, and composition, the book creates a sense of progression and emphasizes the vastness and uncertainty of Mars.
-
-          
-        </p>
-        
-
-        <div class="project-meta">
-          <div class="meta-row">
-            <span class="meta-label">Year:</span>
-            <span class="meta-value">2026</span>
+    <main class="portfolioMain" id="work">
+      <article class="projectCard">
+        <a href="wateronmars/index.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="wateronmars.png" alt="Water on Mars book design preview" class="projectImage" />
           </div>
-
-          <div class="meta-row">
-            <span class="meta-label">Type:</span>
-            <span class="meta-value">Editorial / Book Design</span>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Water on Mars</h2>
+            <p class="projectType">Book Design</p>
+            <p class="projectYear">2025</p>
           </div>
+        </a>
+      </article>
 
-          <div class="meta-row">
-            <span class="meta-label">Focus:</span>
-            <span class="meta-value">Layout, typography, sequencing, image-based storytelling</span>
+      <article class="projectCard">
+        <a href="clock-tunnel.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="clocktunnel.jpg" alt="Clock Tunnel web design preview" class="projectImage" />
           </div>
-
-          <div class="meta-row">
-            <span class="meta-label">Tools:</span>
-            <span class="meta-value">Adobe InDesign, Photoshop, Illustrator</span>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Clock Tunnel</h2>
+            <p class="projectType">Web Design</p>
+            <p class="projectYear">2026</p>
           </div>
-        </div>
-      </div>
-    </section>
+        </a>
+      </article>
 
-    <!-- selected views -->
-    <section class="project-section">
-      <h2 class="section-title">Selected Views</h2>
 
-      <div class="selected-grid">
-        <figure class="selected-item">
-          <img src="image/circle body.png" alt="Interior spread with circular composition" />
-        </figure>
-
-        <figure class="selected-item">
-          <img src="image/image + text.png" alt="Interior spread with image and text" />
-        </figure>
-
-        <figure class="selected-item">
-          <img src="image/image.png" alt="Interior spread with large image" />
-        </figure>
-
-        <figure class="selected-item">
-          <img src="image/chapter opener.png" alt="Chapter opener spread" />
-        </figure>
-      </div>
-    </section>
-
-    <!-- concept -->
-    <section class="project-section concept-section">
-      <h2 class="section-title">Concept</h2>
-
-      <div class="concept-text">
-        <p>
-          The project uses a restrained black-and-white palette, spacious margins,
-          and high-contrast spreads to create a sense of distance, scale, and scientific clarity.
-          Images are treated as both evidence and atmosphere. Through pacing, chapter transitions,
-          and compositional shifts, the book moves between data, speculation, and visual immersion,
-          framing Mars as a landscape of imagination.
-        </p>
-      </div>
-    </section>
-
-    <!-- overview video / gif -->
-    <section class="project-section">
-      <h2 class="section-title">Overview Video</h2>
-
-      <div class="overview-media">
-        <!-- GIF version -->
-        <img src="image/-.gif" alt="Water on Mars overview animation" />
-
-        <!-- MP4 쓰고 싶으면 위 img 지우고 아래 video 살려
-        <video autoplay muted loop playsinline controls>
-          <source src="image/project.mp4" type="video/mp4" />
-        </video>
-        -->
-      </div>
-    </section>
-  </main>
+    <footer class="oneBottom">
+      <a class="footLink" href="mailto:s7e.song@gmail.com">Email</a>
+      <div class="footCenter"></div>
+      <a class="footLink" href="https://www.instagram.com/ssejinnnn/" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+    </footer>
+  </section>
 
   <script src="script.js"></script>
 </body>
