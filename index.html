@@ -1,127 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>clocktunnel — Sejin Song</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sejin + Song</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="site-body">
-  <header class="site-header">
-    <a class="brand" href="index.html">Sejin Song</a>
 
-    <div class="header-center">
-      <button id="modeToggle" class="mode-button" type="button" aria-label="Toggle theme">
+<body>
+  <!-- 1) Intro scroll animation zone -->
+  <section class="scrollZone" id="scrollZone">
+    <div class="stage">
+      <div class="type">
+        <!-- Stage 0 -->
+        <h1 class="type__line is-0" id="t0">
+          <span class="left">sejin</span>
+          <span class="plus">+</span>
+          <span class="right">song</span>
+        </h1>
+
+        <!-- Stage 1 -->
+        <h1 class="type__line is-1" id="t1" aria-hidden="true">
+          <span class="left">se</span>
+          <span class="plus">+</span>
+          <span class="right">so</span>
+        </h1>
+
+        <!-- Stage 2 -->
+        <h1 class="type__line is-2" id="t2" aria-hidden="true">
+          <span class="left">s</span>
+          <span class="plus">+</span>
+          <span class="right">s</span>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) Portfolio page (replacing ONE) -->
+  <section class="onePage" id="one">
+    <header class="oneTop">
+      <div class="oneTop__left">Sejin Song</div>
+
+      <button class="modeBtn" id="modeBtn" type="button" aria-label="Toggle theme">
         Mode
       </button>
-    </div>
 
-    <nav class="site-nav" aria-label="Main navigation">
-       <a href="../About/index.html" class="navLink">About</a>
+      <nav class="oneTop__right">
+        <a href="About/index.html" class="navLink">About</a>
         <a href="#work" class="navLink is-active">Work</a>
-    </nav>
-  </header>
-  
+      </nav>
+    </header>
 
-  <main class="project-page">
-    <!-- top section -->
-    <section class="project-top">
-      <div class="project-top__image">
-        <img src="image/1.jpg" alt="Clock Tunnel front gif" />
-      </div>
-
-      <div class="project-top__info">
-        <h1>Clock Tunnel</h1>
-
-        <p class="project-summary">
-         Clock Tunnel is an interactive typographic website that explores the concept of nonlinear time.
-The project visualizes time as a layered and recursive structure rather than a linear progression.
-
-The interface is built around concentric clock-like rings, where users navigate through time by scrolling, dragging, and clicking. As interaction unfolds, fragments of text appear, disappear, and disperse like sand, referencing Borges’ narratives such as The Circular Ruins, The Garden of Forking Paths, and The Book of Sand.
-
-          
-        </p>
-        
-
-        <div class="project-meta">
-          <div class="meta-row">
-            <span class="meta-label">Year:</span>
-            <span class="meta-value">2026</span>
+    <main class="portfolioMain" id="work">
+      <article class="projectCard">
+        <a href="wateronmars/index.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="wateronmars.png" alt="Water on Mars book design preview" class="projectImage" />
           </div>
-
-          <div class="meta-row">
-            <span class="meta-label">Type:</span>
-            <span class="meta-value">Interactive Web / Typography</span>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Water on Mars</h2>
+            <p class="projectType">Book Design</p>
+            <p class="projectYear">2025</p>
           </div>
+        </a>
+      </article>
 
-          <div class="meta-row">
-            <span class="meta-label">Focus:</span>
-            <span class="meta-value">Interactive Typography, Motion, User Navigation, Nonlinear Narrative</span>
+      <article class="projectCard">
+        <a href="clocktunnel/index.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="clocktunnel.jpg" alt="Clock Tunnel web design preview" class="projectImage" />
           </div>
-
-          <div class="meta-row">
-            <span class="meta-label">Tools:</span>
-            <span class="meta-value">HTML, CSS, JavaScript</span>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Clock Tunnel</h2>
+            <p class="projectType">Web Design</p>
+            <p class="projectYear">2026</p>
           </div>
-        </div>
-      </div>
-    </section>
+        </a>
+      </article>
 
-    <!-- selected views -->
-    <section class="project-section">
-      <h2 class="section-title">Selected Views</h2>
 
-      <div class="selected-grid">
-        <figure class="selected-item">
-          <img src="image/6.jpg" alt="Interior spread with circular composition" />
-        </figure>
+    <footer class="oneBottom">
+      <a class="footLink" href="mailto:s7e.song@gmail.com">Email</a>
+      <div class="footCenter"></div>
+      <a class="footLink" href="https://www.instagram.com/sesorchive" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+    </footer>
+  </section>
 
-        <figure class="selected-item">
-          <img src="image/3.jpg" alt="Interior spread with image and text" />
-        </figure>
-
-        <figure class="selected-item">
-          <img src="image/8.jpeg" alt="Interior spread with large image" />
-        </figure>
-
-        <figure class="selected-item">
-          <img src="image/7.jpeg" alt="Chapter opener spread" />
-        </figure>
-      </div>
-    </section>
-
-    <!-- concept -->
-    <section class="project-section concept-section">
-      <h2 class="section-title">Concept</h2>
-
-      <div class="concept-text">
-        <p>
-         Inspired by the nonlinear and recursive narratives of Jorge Luis Borges, Clock Tunnel challenges conventional modes of reading that rely on fixed order and linear progression.
-Instead of guiding users through a predetermined sequence, the project proposes a fragmented structure in which meaning is assembled through interaction.
-
-Time is not presented as something stable or universally shared, but as a shifting condition shaped by perception and interpretation. Each encounter reorganizes fragments differently, producing multiple possible readings rather than a single coherent narrative.
-
-By disrupting familiar reading patterns, Clock Tunnel reframes time as an experience that is actively constructed—fluid, subjective, and continuously redefined through engagement.
-        </p>
-      </div>
-    </section>
-
- <section class="project-section">
-  <h2 class="section-title">Overview</h2>
-
-<div class="overview-media">
-  <video controls width="100%">
-    <source src="image/clocktunnel.mp4" type="video/mp4">
-  </video>
-</div>
-</section>
-
-<section class="back-home">
-  <a href="../index.html" class="back-home__button">Back to Homepage</a>
-</section>
-</main>
-  </main>
- 
 </body>
 </html>
 <script src="script.js"></script>
