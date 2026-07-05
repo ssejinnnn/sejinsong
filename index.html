@@ -1,162 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Morae — Sejin Song</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sejin + Song</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="site-body">
-  <header class="site-header">
-    <a class="brand" href="../index.html">Sejin Song</a>
+<body>
+  <!-- 1) Intro scroll animation zone -->
+  <section class="scrollZone" id="scrollZone">
+    <div class="stage">
+      <div class="type">
+        <!-- Stage 0 -->
+        <h1 class="type__line is-0" id="t0">
+          <span class="left">sejin</span>
+          <span class="plus">+</span>
+          <span class="right">song</span>
+        </h1>
 
-    <div class="header-center">
-      <button id="modeToggle" class="mode-button" type="button">Mode</button>
+        <!-- Stage 1 -->
+        <h1 class="type__line is-1" id="t1" aria-hidden="true">
+          <span class="left">se</span>
+          <span class="plus">+</span>
+          <span class="right">so</span>
+        </h1>
+
+        <!-- Stage 2 -->
+        <h1 class="type__line is-2" id="t2" aria-hidden="true">
+          <span class="left">s</span>
+          <span class="plus">+</span>
+          <span class="right">s</span>
+        </h1>
+      </div>
     </div>
+  </section>
 
-    <nav class="site-nav">
-      <a href="../About/index.html" class="navLink">About</a>
-      <a href="../index.html#work" class="navLink is-active">Work</a>
-    </nav>
-  </header>
+  <!-- 2) Portfolio page -->
+  <section class="onePage" id="one">
+    <header class="oneTop">
+      <div class="oneTop__left">Sejin Song</div>
+      <button class="modeBtn" id="modeBtn" type="button" aria-label="Toggle theme">
+        Mode
+      </button>
+      <nav class="oneTop__right">
+        <a href="About/index.html" class="navLink">About</a>
+        <a href="#work" class="navLink is-active">Work</a>
+      </nav>
+    </header>
 
-  <main class="project-page">
-    <section class="project-top">
-      <div class="project-top__image">
-        <img src="image/3-1.jpg" alt="Morae logo and identity preview" />
-      </div>
+    <main class="portfolioMain" id="work">
+      <article class="projectCard">
+        <a href="wateronmars/index.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="wateronmars.png" alt="Water on Mars book design preview" class="projectImage" />
+          </div>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Water on Mars</h2>
+            <p class="projectType">Book Design</p>
+            <p class="projectYear">2025</p>
+          </div>
+        </a>
+      </article>
 
-      <div class="project-top__info">
-        <h1>MORAE</h1>
+      <article class="projectCard">
+        <a href="clocktunnel/index.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="clocktunnel.jpg" alt="Clock Tunnel web design preview" class="projectImage" />
+          </div>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Clock Tunnel</h2>
+            <p class="projectType">Web Design</p>
+            <p class="projectYear">2026</p>
+          </div>
+        </a>
+      </article>
 
-        <p class="project-summary">
-          MORAE is a speculative visual system for a fictional nation where time becomes a visible and controllable resource.
-          Every person, object, place, and piece of information exists with a measurable lifespan.
-          The project imagines a society where time functions like currency, shaping identity, value, and existence.
-        </p>
+      <article class="projectCard">
+        <a href="Morae/index.html" class="projectLink">
+          <div class="projectImageWrap">
+            <img src="3-1.jpg" alt="Morae preview 1" class="projectImage" />
+          
+          </div>
+          <div class="projectMeta">
+            <h2 class="projectTitle">Morae</h2>
+            <p class="projectType">Branding</p>
+            <p class="projectYear">2026</p>
+          </div>
+        </a>
+      </article>
+    </main>
 
-        <div class="project-meta">
-          <div class="meta-row"><span class="meta-label">Year:</span><span>2026</span></div>
-          <div class="meta-row"><span class="meta-label">Type:</span><span>World-Building / Visual Identity / Typography</span></div>
-          <div class="meta-row"><span class="meta-label">Focus:</span><span>Speculative Design, Time System, Identity, Interface, Motion</span></div>
-          <div class="meta-row"><span class="meta-label">Tools:</span><span>Photoshop, Illustrator, InDesign, Figma</span></div>
-        </div>
-      </div>
-    </section>
+    <footer class="oneBottom">
+      <a class="footLink" href="mailto:s7e.song@gmail.com">Email</a>
+      <div class="footCenter"></div>
+      <a class="footLink" href="https://www.instagram.com/sesorchive" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+    </footer>
+  </section>
 
-    <section class="project-section text-section">
-      <h2 class="section-title">Concept</h2>
-
-        <p class="concept-question">
-   What if your remaining lifetime was visible?
-  </p>
-
-      <div class="large-text">
-      
-        <p>
-          In MORAE, time is no longer invisible. It is counted, stored, exchanged, and optimized.
-          A passport displays the remaining lifespan of a citizen, a coin turns time into money,
-          and a digital portal allows people to track and manage their time like a financial account.
-      
-          Through these objects and interfaces, the project imagines a society where time becomes
-          the most important social value. Identity, status, and existence are all defined by how much
-          time remains and how efficiently it is used.
-        </p>
-      </div>
-    </section>
-
-    <section class="project-section text-section">
-      <h2 class="section-title">Passport</h2>
-
-      <div class="large-text">
-        <p>
-          The passport acts as an official identity document in MORAE. Instead of only showing nationality,
-          name, and date of birth, it displays the remaining lifespan of the citizen.
-      
-          Time becomes part of personal identification. The document turns duration into something visible,
-          measurable, and controlled by the system.
-        </p>
-      </div>
-
-      <figure class="full-image">
-        <img src="image/passport.png" alt="Morae passport design" />
-      </figure>
-    </section>
-
-    <section class="project-section text-section">
-      <h2 class="section-title">Currency</h2>
-
-      <div class="large-text">
-        <p>
-          The currency system visualizes time as money. Each coin represents a specific amount of time,
-          suggesting a world where days, months, and years can be stored, exchanged, and spent.
-        
-          By treating time as currency, MORAE questions how value would change if human life could be
-          divided into measurable units.
-        </p>
-      </div>
-
-      <figure class="full-image">
-        <img src="image/coin.png" alt="Morae coin design" />
-      </figure>
-    </section>
-
-    <section class="project-section text-section">
-      <h2 class="section-title">Digital Interface</h2>
-
-      <div class="large-text">
-        <p>
-          The digital interface functions like a bank account for time. Users can view their remaining lifespan,
-          track daily usage, check transaction history, and receive optimization suggestions.
-   
-          The portal translates the abstract idea of time into data, charts, warnings, and system feedback.
-          It shows how personal existence could become something constantly monitored and managed.
-        </p>
-      </div>
-
-      <div class="website-grid">
-        <figure class="website-item website-item--wide">
-          <img src="image/web-1.JPG" alt="Morae website overview" />
-        </figure>
-
-        <figure class="website-item">
-          <img src="image/web-2.JPG" alt="Morae main status interface" />
-        </figure>
-
-        <figure class="website-item">
-          <img src="image/web-3.JPG" alt="Morae time transaction log interface" />
-        </figure>
-
-        <figure class="website-item">
-          <img src="image/web-4.JPG" alt="Morae time optimization interface" />
-        </figure>
-
-        <figure class="website-item">
-          <img src="image/web-5.JPG" alt="Morae about interface" />
-        </figure>
-      </div>
-    </section>
-
-    <section class="project-section text-section">
-      <h2 class="section-title">Digital Interface Overview</h2>
-
-      <div class="large-text">
-      
-      </div>
-<div class="overview-media">
-  <video controls playsinline preload="metadata">
-    <source src="image/morae.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-    </section>
-
-    <section class="back-home">
-      <a href="../index.html" class="back-home__button">Back to Homepage</a>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
+<script src="script.js"></script>
